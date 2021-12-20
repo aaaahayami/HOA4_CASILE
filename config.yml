@@ -1,0 +1,16 @@
+
+---
+- name: Install tools
+  hosts: all
+  tasks:
+    - name: Install elasticsearch
+      include_role:
+        name: elastic
+    
+    - name: Install logstash
+      include_role:
+        name: logstash
+
+    - name: Install kibana
+      include_role:
+        name: kibana
